@@ -14,7 +14,7 @@ def create_app():
             entry_content = request.form.get('content')
             formatted_date = datetime.datetime.today().strftime('%Y-%m-%d')
             app.db.entries.insert_one(
-                {"content": entry_content, "date": formatted_date, 'test': 'test_value'})
+                {"content": entry_content, "date": formatted_date})
 
         entries_with_date = [
             (
